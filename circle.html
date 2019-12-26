@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        /* .box{
+            height: 100vh;
+            width: 100vw;
+        } */
+    #wrap{
+        width: 242px;
+        height: 242px;
+        border-radius: 50%;
+        border: solid 5px salmon;
+        margin: 25px auto 0;
+        position: relative;
+        line-height: 250px;
+        text-align: center;
+    }
+    #wrap span{
+        width: 15px;
+        height: 15px;
+        left: 122.5px;
+        top: -2.5px;
+        border-radius: 50%;
+        background: slateblue;
+        position: absolute;    
+    }
+    #shadow{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 250px;
+        height: 250px;
+    }
+    /* #shadow span{
+        width: 9px;
+        height: 9px;
+    } */
+    .btn{
+        position: absolute;
+        bottom: -40px;
+        left: 50%;
+        width:60px;
+        height: 20px;
+        text-align: center;
+        line-height: 10px;
+    }
+
+    </style>
+</head>
+<body>
+    <div id="wrap"><button class="btn">返回</button>
+        <span></span>    
+        <!-- <div id="shadow"><span></span></div> -->
+    </div>
+    
+    <script>
+        (function(){
+             let startDeg=90;
+             let  r=122.75;
+             let oS=document.querySelector("span");
+            //  let shadow=document.getElementById("shadow");
+            //  let randomColor=function(){
+            //      let [r,g,b]=[Math.floor(Math.random()*256),Math.floor(Math.random()*256),Math.floor(Math.random()*256)]
+            //      return `rgb(${r},${g},${b})`;
+            //  };
+             function m(){
+                 startDeg-=0.5;
+                 //r-=0.1
+                 let rad=startDeg/360*2*Math.PI;
+                 let x=Math.cos(rad)*r,
+                     y=Math.sin(rad)*r,
+                     left=x+125-7.5,
+                     top=125-y-7.5;
+                     oS.style.left=left+"px";
+                     oS.style.top=top+"px";
+                    //  shadow.innerHTML=`<span style="background-color:${randomColor()};left:${left+3}px;top:${top+3}px"></span>`;
+                     requestAnimationFrame(m);
+             }
+             requestAnimationFrame(m);
+        })();
+        let oBtn=document.querySelector(".btn");
+        oBtn.onclick=function(){
+            window.history.back(-1);
+
+        }
+    //    let oCircle=document.querySelector(".bigcircle>span"),
+    //        topnum=0,
+    //        leftnum=0,
+    //        bottomnum=0,
+    //        rightnum=0         
+    //    setInterval(function(){         
+    //        topnum=Math.sqrt(250*250-leftnum*leftnum)
+    //        bottomnum=Math.sqrt(250*250-rightnum*rightnum)
+    //        if(leftnum<250){
+    //          oCircle.classList.add("topleft")
+    //         leftnum++
+    //        oCircle.style.left=leftnum+242.5+"px"
+    //        oCircle.style.top=topnum+242.5+"px"
+    //        }
+    //        else{
+    //         oCircle.classList.remove("topleft")
+    //         oCircle.classList.add("bottomright")
+    //            rightnum++
+    //            oCircle.style.right=rightnum-7.5+"px"
+    //            oCircle.style.bottom=bottomnum+242.5+"px"     
+    //        }
+    //    }, 10);
+    </script>
+
+</body>
+
+</html>

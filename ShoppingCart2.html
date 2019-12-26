@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .box {
+            width: 100vw;
+            height: 100vh;
+            margin: 0 auto;
+            position: relative;
+        }
+        .nav-top {
+            width: 100%;
+            height: 10%;
+            background: tomato;
+            margin: 0 auto;
+        }
+        .nav-top p {
+            position: absolute;
+            right: 47%;
+            top: 3.5%;
+        }
+        .nav-top span {
+            position: absolute;
+            right: 8%;
+            top: 3.5%;
+        }
+        .content {
+            width: 97%;
+            height: 35%;
+            margin: 1% auto;
+            border-radius: 3%;
+        }
+        .content p:first-child {
+            height: 16%;
+            width: 100%;
+        }
+        .content p:nth-child(2) {
+            height: 16%;
+            width: 100%;
+        }
+        .content ul li:first-child {
+            width: 100%;
+            height: 34%;
+        }
+        .content ul li div {
+            display: inline;
+        }
+        .content ul li p {
+            display: inline;
+        }
+        .content ul li:nth-child(2) {
+            width: 100%;
+            height: 34%;
+        }
+        .content ul li:first-child span {
+            width: 70%;
+            height: 50%;
+        }
+        .content ul li:nth-child(2) span {
+
+            width: 70%;
+            height: 50%;
+        }
+        .totleNumText {
+            position: absolute;
+            left: 40%;
+            bottom: 25%;
+            width: 60vw;
+            height: 6vh;
+
+        }
+        .totle {
+            position: absolute;
+            width: 100%;
+            height: 8%;
+            bottom: 8%;
+            left: 0;
+        }
+        .navBottom {
+            position: absolute;
+            width: 100%;
+            height: 8%;
+            bottom: 0%;
+            left: 0;
+            overflow: hidden;
+        }
+        ul {
+            list-style: none;
+        }
+        .navBottom ul li {
+            float: left;
+            margin: 0;
+            padding: 0;
+            width: 20%;
+            height: 100%;
+            line-height: 60px;
+            text-align: center;
+            text-indent: -4vw;
+        }
+        button {
+            width: 6vw;
+            height: 3vh;
+            border: none;
+        }
+        .active {
+            background: tomato;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="nav-top">
+            <p>购物车</p><span>管理</span>
+        </div>
+        <div class="content">
+            <p><button class="bigSelects">选</button>天猫超市></p>
+            <p>换购</p>
+            <ul>
+                <li><button class="select0">选</button>
+                    <p>洗衣液</p><span>
+                        <div class="price0">32.6</div><button class="sub0">-</button>
+                        <div class="amount0">1</div><button class="add0">+</button>
+                    </span>
+                </li>
+                <li><button class="select0">选</button>
+                    <p>挂面</p><span>
+                        <div class="price0">18.9</div><button class="sub0">-</button>
+                        <div class="amount0">1</div><button class="add0">+</button>
+                    </span>
+                </li>
+                <li><button class="select0">选</button>
+                    <p>星期一</p><span>
+                        <div class="price0">243</div><button class="sub0">-</button>
+                        <div class="amount0">1</div><button class="add0">+</button>
+                    </span>
+                </li>
+                <li><button class="select0">选</button>
+                    <p>星期二</p><span>
+                        <div class="price0">39</div><button class="sub0">-</button>
+                        <div class="amount0">1</div><button class="add0">+</button>
+                    </span>
+                </li>
+                <li><button class="select0">选</button>
+                    <p>星期三</p><span>
+                        <div class="price0">998</div><button class="sub0">-</button>
+                        <div class="amount0">1</div><button class="add0">+</button>
+                    </span>
+                </li>
+                <li><button class="select0">选</button>
+                    <p>星期四</p><span>
+                        <div class="price0">16.8</div><button class="sub0">-</button>
+                        <div class="amount0">1</div><button class="add0">+</button>
+                    </span>
+                </li>
+                <li><button class="select0">选</button>
+                    <p>星期五</p><span>
+                        <div class="price0">25.33</div><button class="sub0">-</button>
+                        <div class="amount0">1</div><button class="add0">+</button>
+                    </span>
+                </li>
+                <!-- <li></li>
+                <li></li> -->
+            </ul>
+        </div>
+        <div class="content">
+            <p><button class="bigSelects">选</button>医疗器械</p>
+            <p>购物津贴</p>
+            <ul>
+                <li><button class="select1">选</button>
+                    <p>口罩1</p><span>
+                        <div class="price1">16.8</div><button class="sub1">-</button>
+                        <div class="amount1">1</div><button class="add1">+</button>
+                    </span>
+                </li>
+                <li><button class="select1">选</button>
+                    <p>甘蔗<p><span>
+                                <div class="price1">19.3</div><button class="sub1">-</button>
+                                <div class="amount1">1</div><button class="add1">+</button>
+                            </span>
+                </li>
+                <li><button class="select1">选</button>
+                    <p>星期六<p><span>
+                                <div class="price1">196</div><button class="sub1">-</button>
+                                <div class="amount1">1</div><button class="add1">+</button>
+                            </span>
+                </li>
+                <li><button class="select1">选</button>
+                    <p>星期天<p><span>
+                                <div class="price1">66</div><button class="sub1">-</button>
+                                <div class="amount1">1</div><button class="add1">+</button>
+                            </span>
+                </li>
+                <!-- <li></li>
+                <li></li> -->
+            </ul>
+        </div>
+        <div class="totle"><button id="totleAll">选</button><span>全选</span><span class="totleNumText">不含运费合计：<span
+                    id="totlePriceCurrent">0</span></span></div>
+        <div class="navBottom">
+            <ul>
+                <li>首页</li>
+                <li>微淘</li>
+                <li>消息</li>
+                <li>购物车</li>
+                <li>我的淘宝</li>
+            </ul>
+        </div>
+    </div>
+    <script>
+        let oAddBtns0 = document.querySelectorAll(".add0"),
+            oAddBtns1 = document.querySelectorAll(".add1"),
+            oSubBtns0 = document.querySelectorAll(".sub0"),
+            oSubBtns1 = document.querySelectorAll(".sub1"),
+            oSelects0 = document.querySelectorAll(".select0"),
+            oSelects1 = document.querySelectorAll(".select1"),
+            oPrices0 = document.querySelectorAll(".price0"),
+            oAmounts0 = document.querySelectorAll(".amount0"),
+            oPrices1 = document.querySelectorAll(".price1"),
+            oAmounts1 = document.querySelectorAll(".amount1"),
+            oBigSelects = document.querySelectorAll(".bigSelects"),
+            oTotleAll = document.querySelector("#totleAll"),
+            oTotlePriceCurrent = document.querySelector("#totlePriceCurrent")
+        console.log(oTotleAll)
+        //加减 店铺第(oBigSelects[0])1个
+        for (let i = 0; i < oAddBtns0.length; i++) {
+            oAddBtns0[i].temindex = i
+            oAddBtns0[i].onclick = function () {
+                oAmounts0[this.temindex].innerHTML = +oAmounts0[this.temindex].innerHTML + 1
+            }
+        }
+        for (let i = 0; i < oSubBtns0.length; i++) {
+            oSubBtns0[i].temindex = i
+            oSubBtns0[i].onclick = function () {
+                oAmounts0[this.temindex].innerHTML == 1 ? oAmounts0[this.temindex].innerHTML = 1 : oAmounts0[this.temindex].innerHTML = +oAmounts0[this.temindex].innerHTML - 1
+            }
+        }
+        //选 不选
+        //商铺1 oBigSelects[0]
+        //所有商品选与不选
+        for (let i = 0; i < oSelects0.length; i++) {
+            oSelects0[i].onclick = function () {
+                this.classList.toggle("active")
+            }
+        }
+        //所有商品与商铺active关系
+        setInterval(() => {
+            for (let i = 0; i < oSelects0.length; i++) {
+                if (!oSelects0[i].classList.contains("active")) {
+                    oBigSelects[0].classList.remove("active")
+                    break
+                }
+                else {
+                    oBigSelects[0].classList.add("active")
+                }
+            }
+        }, 60);
+        //商铺(oBigSelects[0])与所有商品active关系
+        oBigSelects[0].onclick = function () {
+            this.classList.toggle("active")
+            for (let k = 0; k < oSelects0.length; k++) {
+                this.classList.contains("active") ? oSelects0[k].classList.add("active") : oSelects0[k].classList.remove("active")
+            }
+        }
+        //商铺2 oBigSelects[1]所有商品选与不选
+        for (let i = 0; i < oSelects1.length; i++) {
+            oSelects1[i].onclick = function () {
+                this.classList.toggle("active")
+            }
+        }
+        for (let i = 0; i < oSelects0.length; i++) {
+            oSelects0[i].onclick = function () {
+                this.classList.toggle("active")
+            }
+        }
+        //加减 店铺第( oBigSelects[1]下标为1)2个
+        for (let i = 0; i < oAddBtns1.length; i++) {
+            oAddBtns1[i].temindex = i
+            oAddBtns1[i].onclick = function () {
+                oAmounts1[this.temindex].innerHTML = +oAmounts1[this.temindex].innerHTML + 1
+            }
+        }
+        for (let i = 0; i < oSubBtns1.length; i++) {
+            oSubBtns1[i].temindex = i
+            oSubBtns1[i].onclick = function () {
+                oAmounts1[this.temindex].innerHTML == 1 ? oAmounts1[this.temindex].innerHTML = 1 : oAmounts1[this.temindex].innerHTML = +oAmounts1[this.temindex].innerHTML - 1
+            }
+        }
+        //所有商品与商铺active关系
+        setInterval(() => {
+            for (let i = 0; i < oSelects1.length; i++) {
+                if (!oSelects1[i].classList.contains("active")) {
+                    oBigSelects[1].classList.remove("active")
+                    break
+                }
+                else {
+                    oBigSelects[1].classList.add("active")
+                }
+            }
+        }, 60);
+        oBigSelects[1].onclick = function () {
+            this.classList.toggle("active")
+            for (let i = 0; i < oSelects1.length; i++) {
+                this.classList.contains("active") ? oSelects1[i].classList.add("active") : oSelects1[i].classList.remove("active")
+            }
+        }
+        //totle 全选按钮与所有按钮关系
+        oTotleAll.onclick = function () {
+            this.classList.toggle("active")
+            for (let x = 0; x < oSelects0.length; x++) {
+                this.classList.contains("active") ? oSelects0[x].classList.add("active") : oSelects0[x].classList.remove("active")
+            }
+            for (let y = 0; y < oSelects1.length; y++) {
+                this.classList.contains("active") ? oSelects1[y].classList.add("active") : oSelects1[y].classList.remove("active")
+            }
+            for (let z = 0; z < oBigSelects.length; z++) {
+                this.classList.contains("active") ? oBigSelects[z].classList.add("active") : oBigSelects[z].classList.remove("active")
+            }
+        }
+        //totle 所有按钮与全选按钮是否active关系
+        setInterval(function () {
+            for (let i = 0; i < oSelects0.length; i++) {
+                if (!oSelects0[i].classList.contains("active")) {
+                    oTotleAll.classList.remove("active")
+                    break
+                }
+                else {
+                    oTotleAll.classList.add("active")
+                }
+            }
+            for (let i = 0; i < oSelects1.length; i++) {
+                if (!oSelects1[i].classList.contains("active")) {
+                    oTotleAll.classList.remove("active")
+                    break
+                }
+                else {
+                    oTotleAll.classList.add("active")
+                }
+            }
+            for (let i = 0; i < oBigSelects.length; i++) {
+                if (!oBigSelects[i].classList.contains("active")) {
+                    oTotleAll.classList.remove("active")
+                    break
+                }
+                else {
+                    oTotleAll.classList.add("active")
+                }
+            }
+        }, 60);
+        //显示选择价格 oPrices oMounts
+        setInterval(function () {
+            var totle0 = ""
+            for (let Num0 = 0; Num0 < oSelects0.length; Num0++) {
+                if (!oSelects0[Num0].classList.contains("active")) {
+                    continue
+                } else {
+                    totle0 = +totle0 + oPrices0[Num0].innerHTML * oAmounts0[Num0].innerHTML
+                }
+            }
+            var totle1 = ""
+            for (let Num1 = 0; Num1 < oSelects1.length; Num1++) {
+                if (!oSelects1[Num1].classList.contains("active")) {
+                    continue
+                } else {
+                    totle1 = +totle1 + oPrices1[Num1].innerHTML * oAmounts1[Num1].innerHTML
+                }
+            }
+            var TotleAllEnd = Number(totle0) + Number(totle1);
+            oTotlePriceCurrent.innerHTML = TotleAllEnd.toFixed(2);
+        }, 60);
+        let oLisChange = document.querySelectorAll(".navBottom ul li");
+        oLisChange[0].onclick = function () {
+            window.location.href = "page.html"
+        }
+        oLisChange[1].onclick = function () {
+            window.location.href = "video.html"
+        }
+        oLisChange[2].onclick = function () {
+            window.location.href = "circle.html"
+        }
+        oLisChange[4].onclick = function () {
+            window.location.href = "me.html"
+        }
+    </script>
+</body>
+
+</html>
