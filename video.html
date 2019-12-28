@@ -11,22 +11,22 @@
             padding: 0;
             font-family: "微软雅黑 Microsoft YaHei";
         }
-        #app{
+        .fixed-content-nav{
             width: 100vw;
-            height: 100vh;
-        }
-        .box{
-            width: 100%;
-            height: 100%;
+            height: 81.7vh;
+            
             
         }
         .top-battery{
             height: 3.2vh;
             width: 100%;
+            background: whitesmoke;
         }
          .top-nav{
              height:5.1vh;
-             width: 100%;
+             width: 100vw;
+             font-size: .30rem;
+             background: white;
          }
          ul{
              list-style: none;
@@ -38,13 +38,16 @@
              line-height: 5.1vh;
          }
          .content-bar{
-             height: 85vh;
+             height: 81.7vh;
              width: 100%;
              overflow: hidden;
              overflow-y: scroll;
+             position: absolute;
+             top: 8.3vh;
+             bottom: 10vh;
          }
          .content-bar ul li{
-             height: 31.4vh;
+             height: 31.7vh;
              width: 100%;
              position: relative;
          }
@@ -60,7 +63,7 @@
              bottom: 0;
              left:3vw;
              line-height: 6.15vh;
-             font-size: .32rem;
+             font-size: .28rem;
              opacity: 0.8;            
          }
          .content-bar ul li span{
@@ -71,36 +74,69 @@
              bottom: 1.45vh;
              text-align: center;
              color: orangered;
-             font-size:.32rem;
+             font-size:.26rem;
              line-height: 3.5vh;
              border:solid .01rem orangered;
          }
          .content-bar ul li div aa{
              color: red;
-             font-size: .48rem;
+             font-size: .34rem;
          }
-         .navBottom{
-             height: 6.67vh;
-             width: 100%;
-         }
-         .navBottom ul li{
-             float: left;
-             width: 25%;
-             height: 6.67vh;
-             text-align: center;
-             line-height: 6.67vh;
-         }
-         
-    
+        /* 下导航区 */
+        .bottom-nav {
+            height: 10vh;
+            width: 100vw;
+            position: absolute;
+            bottom: 0;
+        }
+         .bottom-nav ul li {
+            font-size: .32rem;
+            height: 10vh;
+            width: 25vw;
+            float: left;
+            text-align: center;
+            text-indent: 1vw;
+            line-height: 10vh;
+            background: white;
+        }
+        .goldenrod {
+            color: goldenrod;
+        }
+
+        .fixed-bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 66;
+        }
+        .fixed-top-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 66;
+        }
+        .blocks{
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            display: none;
+        }
+        .show{
+            display:block;
+        }
+        .red{
+            color: red;
+        }
     </style>
 </head>
 <body>
-    <div id="app">
-        <div class="box">
-            <div class="top-battery"></div>
+    <div class="fixed-top-nav">
+        <div class="top-battery"></div>
             <div class="top-nav">
                 <ul>
-                    <li>社会</li>
+                    <li class="red" style="font-size: .36rem;">社会</li>
                     <li>世界</li>
                     <li>娱乐</li>
                     <li>生活</li>
@@ -108,44 +144,105 @@
                     <li>新知</li>
                 </ul>
             </div>
+        </div>
+ <div class="box">
     <div class="content-bar">
-            <ul>
-               <li><p><video src=""></video></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
-               </div><span>转发赚钱</span></li>
-               <li><p><video src=""></video></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
-               </div><span>转发赚钱</span></li>
-               <li><p><video src=""></video></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
-               </div><span>转发赚钱</span></li>
-               <li><p><video src=""></video></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
-               </div><span>转发赚钱</span></li>
-               <li><p><video src=""></video></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
-               </div><span>转发赚钱</span></li>
-               <li><p><video src=""></video></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
-               </div><span>转发赚钱</span></li>
-               <li><p><video src=""></video></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
-               </div><span>转发赚钱</span></li>
+        <div class="blocks show">
+             <ul>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>3发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>3发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>3发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>3发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>3发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>3发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>3发赚钱</span></li>
             </ul>
+        </div>
+        <div class="blocks">
+            <ul>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>2发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>2发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>2发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>2发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>2发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>2发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>2发赚钱</span></li>
+            </ul>
+        </div>
+        <div class="blocks">
+            <ul>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>1发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>1发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>1发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>1发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>1发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>1发赚钱</span></li>
+               <li><p></p><div>3毛/订阅 &nbsp;&nbsp;已发放<aa>2594元</aa>
+               </div><span>1发赚钱</span></li>
+            </ul>
+        </div>
      </div>
-     <div class="navBottom">
-        <ul>
-            <li>资讯</li>
-            <li>视频</li>
-            <li>收徒</li>
-            <li>我的</li>
-        </ul>
+</div>
+     <div class="fixed-bottom-nav">
+        <div class="bottom-nav">
+            <ul>
+                <li>资讯</li>
+                <li class="goldenrod">视频</li>
+                <li>收徒</li>
+                <li>我的</li>
+            </ul>
+        </div>
     </div>
-       </div>
-    </div>
+    <script src="script/rem.js"></script>
     <script>
-       let oLisChange=document.querySelectorAll(".navBottom ul li");
+       let  oSelectScrollLis = document.querySelectorAll(".top-nav>ul>li"),
+            oBlocks = document.querySelectorAll(".blocks");
+        for (let j = 0; j < oSelectScrollLis.length; j++) {
+            oSelectScrollLis[j].temindex = j
+            oSelectScrollLis[j].onclick = function () {
+                for (let m = 0; m < oSelectScrollLis.length; m++) {
+                    oSelectScrollLis[m].style.fontSize = ".3rem";
+                    oSelectScrollLis[m].style.fontweight = "normol";
+                    oSelectScrollLis[m].classList.remove("red");
+                }
+                for (let n = 0; n < oBlocks.length; n++) {
+                    oBlocks[n].classList.remove("show")
+                }
+                this.style.fontSize = ".36rem";
+                this.style.fontweight = "bolder";
+                this.classList.add("red");
+                oBlocks[this.temindex].classList.add("show")
+            }
+        }
+       let oLisChange=document.querySelectorAll(".bottom-nav ul li");
         oLisChange[0].onclick=function(){
-            window.location.href="page.html"
+            window.location.href="index.html"
         }
         oLisChange[3].onclick=function(){
             window.location.href="me.html"
         }
         oLisChange[2].onclick=function(){
-            window.location.href="ShoppingCart2.html"
+            window.location.href="admit.html"
         }
     </script>
     

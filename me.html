@@ -151,17 +151,25 @@
             text-indent: .2rem;
             line-height: 5.52vh;
         }
+         /* 下导航区 */
         .bottom-nav {
-            height: 6.5vh;
+            height: 10vh;
             width: 100%;
             position: absolute;
             bottom: 0;
         }
-        .bottom-nav ul li {
+         .bottom-nav ul li {
+            font-size: .32rem;
+            height: 10vh;
+            width: 25vw;
             float: left;
-            width: 25%;
             text-align: center;
-            line-height: 6.5vh;
+            text-indent: 1vw;
+            line-height: 10vh;
+            background: white;
+        }
+        .goldenrod {
+            color: goldenrod;
         }
     </style>
 </head>
@@ -211,22 +219,22 @@
                     <li>资讯</li>
                     <li>视频</li>
                     <li>收徒</li>
-                    <li>我的</li>
+                    <li class="goldenrod">我的</li>
                 </ul>
             </div>
         </div>
     </div>
-    <script src="rem.js"></script>
+    <script src="script/rem.js"></script>
     <script>
         let oBtmNavLis = document.querySelectorAll(".bottom-nav ul li");
         oBtmNavLis[0].onclick = function () {
-            window.location.href = "page.html"
+            window.location.href = "index.html"
         }
         oBtmNavLis[1].onclick = function () {
             window.location.href = "video.html"
         }
         oBtmNavLis[2].onclick = function () {
-            window.location.href = "ShoppingCart2.html"
+            window.location.href = "admit.html"
         }
     </script>
 </body>

@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        font-family: "微软雅黑 Microsoft YaHei";
+    }
+    ul {
+        list-style: none;
+    }
+    .bottom-nav ul li {
+        font-size: .32rem;
+        height: 10vh;
+        width: 25vw;
+        float: left;
+        text-align: center;
+        text-indent: 1vw;
+        line-height: 10vh;
+        background: white;
+    }
+    .fixed-bottom-nav {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 66;
+    }
+    .income-balance {
+        height: 22vh;
+        width: 100%;
+        position: absolute;
+        top: 6.1vh;
+        left: 0;
+        background: gold;
+    }
+    .income-balance div:first-child {
+        width: 100%;
+        height: 50%;
+        text-align: center;
+        position: absolute;
+        top: .11rem;
+    }
+    .income-balance div:first-child span {
+        position: absolute;
+        top: 3.4vh;
+        right: 44.2vw;
+
+    }
+    .income-balance div:nth-child(2) {
+        width: 28vw;
+        height: 50%;
+        position: absolute;
+        left: 10vw;
+        top: 43%;
+    }
+    .income-balance div:nth-child(2) span {
+        left: 22vw;
+        position: absolute;
+    }
+    .income-balance div:last-child {
+        width: 28vw;
+        height: 50%;
+        position: absolute;
+        left: 67%;
+        top: 43%;
+    }
+    .income-balance div:last-child span {
+        position: absolute;
+        right: 25.5%;
+    }
+    .income-balance div p {
+        font-size: .28rem;
+    }
+    .income-balance div span {
+        font-size: .52rem;
+        text-indent: -1rem;
+    }
+    .top-battery {
+        height: 6.1vh;
+        width: 100%;
+        background: gold;
+    }
+    .content-select {
+        height: 6.1vh;
+        width: 100%;
+        position: absolute;
+        top: 28.1vh;
+        left: 0;
+    }
+    .content-select ul li {
+        height: 6.5vh;
+        width: 50%;
+        float: left;
+        background: white;
+        color: goldenrod;
+        font-size: .32rem;
+        text-align: center;
+        line-height: 6.5vh;
+    }
+    .content {
+        height: 64.1vh;
+        width: 100vw;
+        overflow-y: scroll;
+        position: absolute;
+        top: 34.2vh;
+        left: 0;
+    }
+    .blocks {
+        height: 96vh;
+        width: 100%;
+        background: whitesmoke;
+    }
+    .invite-style {
+        height: 19.2vh;
+        width: 92.3vw;
+        background: darkcyan;
+        position: absolute;
+        top: 6vh;
+        left: 4vw;
+        border-radius: .25rem;
+    }
+    .invite-style ul li {
+        float: left;
+        width: 25%;
+        height: 100%;
+        line-height: 19.2vh;
+        text-align: center;
+        font-size: .28rem;
+    }
+    .invite-style p {
+        width: 30vw;
+        height: 4.1vh;
+        background: goldenrod;
+        font-size: .32rem;
+        position: absolute;
+        top: -2vh;
+        left: 33%;
+        text-align: center;
+        line-height: 4.1vh;
+        border-radius: 0.25rem;
+        color: white;
+    }
+    .invite-now {
+        height: 9.7vh;
+        width: 92.3vw;
+        background: lightcoral;
+        position: absolute;
+        bottom: 25vh;
+        left: 4vw;
+        border-radius: .6rem;
+        font-size: .48rem;
+        text-align: center;
+        line-height: 9.7vh;
+        color: white;
+        font-weight: bold;
+    }
+    .invite-style-descri {
+        height: 40.7vh;
+        width: 92.3vw;
+        background: darkcyan;
+        position: absolute;
+        top: 43vh;
+        left: 4vw;
+        border-radius: .25rem;
+    }
+    .invite-style-descri ul li {
+        float: left;
+        width: 25%;
+        height: 100%;
+        line-height: 19.2vh;
+        text-align: center;
+        font-size: .28rem;
+    }
+    .invite-style-descri p:last-child {
+        width: 30vw;
+        height: 4.1vh;
+        background: goldenrod;
+        font-size: .32rem;
+        position: absolute;
+        top: -2vh;
+        left: 33%;
+        line-height: 4.1vh;
+        border-radius: 0.25rem;
+        color: white;
+    }
+    .invite-style-descri p {
+        text-align: center;
+        font-size: .32rem;
+        margin: .3rem 0;
+    }
+    .invite-style-descri p:first-child {
+        margin: .9rem 0 0 0;
+    }
+    .goldenrod {
+        color: goldenrod;
+    }
+</style>
+<body>
+    <div class="top-nav">
+        <div class="top-battery"></div>
+        <div class="income-balance">
+            <div>
+                <p>累计贡献（元）</p><span>0.3</span>
+            </div>
+            <div>
+                <p>今日贡献（元）</p><span>0</span>
+            </div>
+            <div>
+                <p>昨日贡献（元）</p><span>0.3</span>
+            </div>
+        </div>
+        <div class="content-select">
+            <ul>
+                <li>邀请徒弟</li>
+                <li>我的徒弟</li>
+            </ul>
+        </div>
+        <div class="content">
+            <div class="blocks">
+                <div class="invite-style">
+                    <ul>
+                        <li>邀请海报</li>
+                        <li>面对面扫码</li>
+                        <li>微信好友</li>
+                        <li>文字链接</li>
+                    </ul>
+                    <p>收徒才能赚更多</p>
+                    <p>邀请方式</p>
+                </div>
+                <div class="invite-now">邀请好友立赚</div>
+                <div class="invite-style-descri">
+                    <p>1.邀请身边朋友、亲戚、同事更容易"收徒"</p>
+                    <p>1.邀请身边朋友、亲戚、同事更容易"收徒"</p>
+                    <p>1.邀请身边朋友、亲戚、同事更容易"收徒"</p>
+                    <p>1.邀请身边朋友、亲戚、同事更容易"收徒"</p>
+                    <p>1.邀请身边朋友、亲戚、同事更容易"收徒"</p>
+                    <p>1.邀请身边朋友、亲戚、同事更容易"收徒"</p>
+
+                    <p>邀请方式</p>
+                </div>
+            </div>
+            <!-- <div class="blocks"></div> -->
+        </div>
+    </div>
+    <div class="fixed-bottom-nav">
+        <div class="bottom-nav">
+            <ul>
+                <li>资讯</li>
+                <li>视频</li>
+                <li class="goldenrod">收徒</li>
+                <li>我的</li>
+            </ul>
+        </div>
+    </div>
+    <script src="script/rem.js"></script>
+    <script>
+       let oLisChange = document.querySelectorAll(".bottom-nav ul li");
+        oLisChange[0].onclick = function () {
+            window.location.href = "index.html"
+        }
+        oLisChange[1].onclick = function () {
+            window.location.href = "video.html"
+        }
+        oLisChange[3].onclick = function () {
+            window.location.href = "me.html"
+        }
+    </script>
+</body>
+</html>
