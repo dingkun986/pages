@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+                * {
+        margin: 0;
+        padding: 0;
+        font-family: "微软雅黑 Microsoft YaHei";
+        font-size: .32rem;
+    }
+    ul{
+        list-style: none;
+    }
+    .head{
+         height: 9.4vh;
+         width: 100%;
+         background: gold;
+         text-align: center;
+         line-height: 9.4vh;
+          position: relative;
+     }
+     .head span:first-child{
+         position: absolute;
+         left: 5vw;
+         top: 0;
+         font-weight:900
+     }
+     .record{
+        position: absolute;
+         right:5vw;
+         top: 0;
+         font-weight:500;
+         font-size: .28rem;
+     }
+     .balance{
+         height: 14.5vh;
+         width: 100%;
+         background: gold;
+         position: relative;
+     }
+     .balance p{
+         position: absolute;
+         left: 5vw;
+         top:2vh
+     }
+     .balance p span{
+         font-size: .48rem;
+     }
+     .withdrawal-amount{
+         height: 24.8vh;
+         width: 96vw;
+         position: absolute;
+         top: 18.5vh;
+         left: 2vw;
+         background: mediumpurple;
+         font-size: .28rem;
+
+     }
+     .withdrawal-amount p{
+         text-indent: .32rem;
+         height: 6vh;
+         width: 100%;
+         line-height: 6vh;
+     }
+     .withdrawal-amount ul li{
+         float: left;
+         width: 30%;
+         height: 6vh;
+         text-align: center;
+         border: solid silver .01rem;
+         line-height: 6vh;
+         margin: 0 1vw 2vh;
+     }
+    </style>
+</head>
+<body>
+    <div class="head"><span class="back">&lt;</span><span>我要提现</span><span class="record">提现记录</span></div>
+    <div class="balance"><p>余额：￥<span>0.300</span></p></div>
+    <div class="withdrawal-amount">
+        <p>提现金额</p>
+        <ul>
+           <li>5元</li>
+           <li>10元</li>
+           <li>50元</li>
+           <li>100元</li>
+           <li>200元</li>
+           <li>500元</li>
+        </ul>
+    </div>
+    <script src="script/rem.js"></script>
+</body>
+</html>

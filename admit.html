@@ -88,7 +88,7 @@
         background: gold;
     }
     .content-select {
-        height: 6.1vh;
+        height: 6.5vh;
         width: 100%;
         position: absolute;
         top: 28.1vh;
@@ -104,25 +104,30 @@
         text-align: center;
         line-height: 6.5vh;
     }
+    .bottom-line {
+      border-bottom:gold solid .045rem;
+    }
     .content {
         height: 64.1vh;
         width: 100vw;
         overflow-y: scroll;
         position: absolute;
-        top: 34.2vh;
+        /* 34.2 */
+        top: 35vh;
         left: 0;
     }
     .blocks {
         height: 96vh;
         width: 100%;
         background: whitesmoke;
+        display: none;
     }
     .invite-style {
-        height: 19.2vh;
+        height: 19vh;
         width: 92.3vw;
         background: darkcyan;
         position: absolute;
-        top: 6vh;
+        top: 6.7vh;
         left: 4vw;
         border-radius: .25rem;
     }
@@ -201,6 +206,44 @@
     .goldenrod {
         color: goldenrod;
     }
+    .blocks:nth-child(2){
+        height: 60vh;
+        width: 100%;
+    }
+    .blocks:nth-child(2) p{
+       font-size: .28rem;
+       height: 6vh;
+       width: 100vw;
+       text-align: center;
+    }
+    .blocks:nth-child(2) p:first-child{
+        background: white;
+        margin:.22rem 0 0 0;
+        
+    }
+    .totle-income{
+        margin:0 .32rem 0 4.3rem ;
+        width: 40vw;
+        height: 6vh;
+        text-align: center;
+        line-height: 6vh;
+    }
+    .invite-amount{
+       width: 40vw;
+       height: 6vh;
+       margin:0 0 0 .3rem;
+       text-align: center;
+       text-align: 6vh;
+    }
+    .blocks:nth-child(2) p:nth-child(2){
+        height: 12vh;
+        width: 100vw;
+        line-height: 12vh;
+    }
+    .show{
+        display: block;
+    }
+
 </style>
 <body>
     <div class="top-nav">
@@ -218,12 +261,12 @@
         </div>
         <div class="content-select">
             <ul>
-                <li>邀请徒弟</li>
+                <li class="bottom-line">邀请徒弟</li>
                 <li>我的徒弟</li>
             </ul>
         </div>
         <div class="content">
-            <div class="blocks">
+            <div class="blocks show">
                 <div class="invite-style">
                     <ul>
                         <li>邀请海报</li>
@@ -246,9 +289,13 @@
                     <p>邀请方式</p>
                 </div>
             </div>
-            <!-- <div class="blocks"></div> -->
+            <div class="blocks">
+                <p><span class="invite-amount">共0人</span><span class="totle-income">总计：0.00元</span></p>
+                <p>您还没有徒弟哦，赶快邀请好友吧！</p>
+            </div>
         </div>
     </div>
+    
     <div class="fixed-bottom-nav">
         <div class="bottom-nav">
             <ul>
@@ -270,6 +317,19 @@
         }
         oLisChange[3].onclick = function () {
             window.location.href = "me.html"
+        }
+        let oAdmitSelectLis=document.querySelectorAll(".content-select>ul>li"),
+            oBlocks=document.querySelectorAll(".blocks");
+        for(let i=0;i<oAdmitSelectLis.length;i++){
+            oAdmitSelectLis[i].temindex=i;
+            oAdmitSelectLis[i].onclick=function(){
+                for(let j=0; j<oAdmitSelectLis.length;j++){
+                    oBlocks[j].classList.remove("show")
+                    oAdmitSelectLis[j].classList.remove("bottom-line");
+                }
+                this.classList.add("bottom-line");
+                oBlocks[this.temindex].classList.add("show");  
+            }
         }
     </script>
 </body>
